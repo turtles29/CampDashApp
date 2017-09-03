@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampDash</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="bg">
+  <div class="container">
+    <!-- ======     Search Widget    ======  -->
+        <!--Search feature that uses google search -->
+        <div id="search-container">
+            <form id="search-bar" action='http://google.com/search'>
+	            <i style='color: black;' class='fa fa-search'></i><input id='input-search' name='q' type="search" autocomplete="off">
+            </form>
+        </div>
+
+    <!-- ======     Weather Widget    ======  -->
+        <div id="weather-container">
+            <span id='weather-value'></span>
+            <div id="location">
+                <span id="dispCity"></span>
+            </div>
+        </div>
+
+    <!-- ======     Center Time, Greeting, and Focus Widget    ======  -->
+        <div id="greeting-container">
+            <span id='time'></span>
+            <span id='greeting-wrap'><span id='greeting'></span>, <span id='username'>name</span></span>
+            <div id='focus-container'>
+              <span id='focus-prompt'>What is your main focus today?</span>
+              <form id="focus-form">
+                <input id="focus-input" autocomplete="off">
+                <div id="focusLi">
+                  <input id='focusCheck' type='checkbox' autocomplete='off'>
+                  <label id='focus-label' for='#focusCheck'></label><i id='close-button' class='fa fa-close'></i>
+                </div>
+              </form>
+            </div>
+
+        </div>
+
+    <!-- ======     Settings Widget    ======  -->
+
+        <!--This section would have toggle buttons that hide/unhide the other widgets.  -->
+
+        <div id="settings-container">
+             <!--This div will appear and dissapear on click of gear icon  -->
+            <div id="settings-window">
+              <h3 class="widget-title">Settings</h3>
+              <hr>
+              <table>
+                <tr>
+                  <td>Search Bar</td>
+                  <td>
+                    <div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffSearch" checked>
+                    <label class="onoffswitch-label" for="onoffSearch"></label></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Weather</td>
+                  <td>
+                    <div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffWeather" checked>
+                    <label class="onoffswitch-label" for="onoffWeather"></label></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Quotes</td>
+                  <td>
+                    <div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffQuotes" checked>
+                    <label class="onoffswitch-label" for="onoffQuotes"></label></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Todos</td>
+                  <td>
+                    <div class="onoffswitch"><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffTodo" checked>
+                    <label class="onoffswitch-label" for="onoffTodo"></label></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <span class="clickable-icon" id="settings-button"><i id='settings-cog' class="fa fa-cog fa-2x" aria-hidden="true"></i></span>
+        </div>
+
+    <!-- ======     Quote Generator Widget    ======  -->
+    <div id="quote-container">
+      <p id="quote"></p>
+      <p id="author"></p>
+	  </div>
+
+    <!-- ======     Todo Widget    ======  -->
+
+    <div id="todo-container">
+      <div class="todo-popup">
+        <ul id='todo-list'></ul>
+        <input id='clear-todo-btn' class="clear-todo" type='button' value='Clear Completed'>
+        <br>
+        <input id="newTodo" class="text-input" type='text' placeholder="Enter A Todo">
+      </div>
+      <span id='todo-button'>Todo</span>
+    </div>
+  </div>
+</div>
+<!--hidden from viewer  -->
+ <div id='templates' class='templates'>
+    <li class='todo-list-item' data-index='-1'>
+      <label>
+        <input class="todo-checkbox" type='checkbox'>
+        <span>Temporary todo item.</span>
+        <button class="close-t-button"></button>
+      </label>
+    </li>
+  </div>
+  <!-- =====    jQuery link    ===== -->
+  <script>window.$ = window.jQuery = require('./jquery/jquery.js');</script>
+
+	<!-- ======     Javascript link    ======  -->
+  <script src='scripts/dashboard/center.js'></script>
+	<script src='scripts/dashboard/dashboard.js'></script>
+  <script src='scripts/dashboard/weather.js'></script>
+  <script src='scripts/dashboard/settings.js'></script>
+  <script src='scripts/dashboard/quote.js'></script>
+  <script src='scripts/dashboard/todo.js'></script>
+  </div>
+</body>
+</html>
