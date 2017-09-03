@@ -1,0 +1,2 @@
+# CampDashApp
+Electron dashboard app
