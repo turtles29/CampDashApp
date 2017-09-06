@@ -18,28 +18,12 @@ window.onload = function() {
 //geoFindme is the geolocation; will retrieve coordinates
 function geoFindMe() {
 
-  if (!navigator.geolocation){
-    $('#dispCity').text('Unable to retrieve your location');
-    $('#weather-value').text('Turn on location');
-  }
-
-  function success(position) {
-
-    //longitude = position.coords.longitude;
-    localStorage.setItem('lat',position.coords.latitude);
-    localStorage.setItem('lon',position.coords.longitude);
-    //latitude  = localStorage.getItem('lat');
-
-    init();
-  }
-
-
-  function error() {
-    $('#dispCity').text('Unable to retrieve your location');
-    $('#weather-value').text('Turn on location');
-  }
-
- navigator.geolocation.getCurrentPosition(success, error);
+      var getIP = 'http://ip-api.com/json/';
+      $.getJSON(getIP).done(function(location) {
+          localStorage.setItem('lat', location.lat);
+          localStorage.setItem('lon', location.lon);
+          init();
+      })
 }
 //init after coordinates are recieved
 
@@ -105,16 +89,16 @@ function init() {
 
 function getIcon(weatherId) {
   if (weatherId > 199 && weatherId < 233) {
-		$('#weather-container').prepend('<img id="weather-icon" src="images/icons/thunderstorm.svg"/>');
+		$('#icon-temp').prepend('<img id="weather-icon" src="images/icons/thunderstorm.svg"/>');
 	} else if (weatherId > 299 && weatherId < 322) {
-		$('#weather-container').prepend('<img id="weather-icon" src="images/icons/drizzle.svg"/>');
+		$('#icon-temp').prepend('<img id="weather-icon" src="images/icons/drizzle.svg"/>');
 	} else if (weatherId > 499 && weatherId < 532) {
-		$('#weather-container').prepend('<img id="weather-icon" src="images/icons/rain.svg"/>');
+		$('#icon-temp').prepend('<img id="weather-icon" src="images/icons/rain.svg"/>');
 	} else if (weatherId > 599 && weatherId < 623) {
-		$('#weather-container').prepend('<img id="weather-icon" src="images/icons/snow.svg"/>');
+		$('#icon-temp').prepend('<img id="weather-icon" src="images/icons/snow.svg"/>');
 	} else if (weatherId === 800) {
-		$('#weather-container').prepend('<img id="weather-icon" src="images/icons/clear.svg"/>');
+		$('#icon-temp').prepend('<img id="weather-icon" src="images/icons/clear.svg"/>');
 	} else if (weatherId > 800 && weatherId < 805 ) {
-    $('#weather-container').prepend('<img id="weather-icon" src="images/icons/Cloud.svg"/>');
+    $('#icon-temp').prepend('<img id="weather-icon" src="images/icons/Cloud.svg"/>');
   }
 }
