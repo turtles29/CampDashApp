@@ -55,12 +55,14 @@ body, html {
   }
 
 }
+
 #search-container {
   position: absolute;
   top: 0;
   left: 0;
   padding-top: 1%;
   padding-left: 1%;
+    
     input {
     border: solid 1px #ccc;
     padding: 9px 7px;
@@ -69,11 +71,9 @@ body, html {
     cursor: pointer;
     font-size: 100%;
     outline: none;
-
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
     border-radius: 10em;
-
     -webkit-transition: all .7s;
     -moz-transition: all .7s;
     transition: all .7s;
@@ -83,19 +83,22 @@ body, html {
       content: "\f002";
       position: relative;
       left: -5px;
-    }
+      }
+
       &:hover{
       background-color: #fff;
+      }
+      
+      &:focus{
+      width: 200px;
+      padding-left: 15%;
+      color: #000;
+      background-color: #fff;
+      cursor: auto;
+      }
     }
-    &:focus{
-    width: 200px;
-    padding-left: 15%;
-    color: #000;
-    background-color: #fff;
-    cursor: auto;
-    }
-  }
 }
+
 #greeting-container {
   position: absolute;
   top: 50%;
@@ -108,8 +111,22 @@ body, html {
   left: 0;
   padding-bottom: 1%;
   padding-left: 1%;
+  // Settings rotation
+  .rotate {
+    cursor: pointer;
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+  }
+  .rotate.down {
+    -ms-transform:rotate(120deg);
+    -moz-transform:rotate(120deg);
+    -webkit-transform:rotate(120deg);
+    transform:rotate(120deg);
+  }
   #settings-window {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 30px;
     width: 200px;
     height: 200px;
     h3{
@@ -122,7 +139,7 @@ body, html {
     table{
       margin: auto;
       td{
-        padding: 3px 15px;
+        padding: 4px 20px;
       }
     }
     .onoffswitch {
@@ -348,11 +365,6 @@ body, html {
     color: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(255, 255, 255, 0.5);
   }
-}
-
-// Settings Styles
-#settings-cog {
-  cursor: pointer;
 }
 
 // Quote Generator Styles
