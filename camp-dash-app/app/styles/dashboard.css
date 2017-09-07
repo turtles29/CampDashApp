@@ -119,8 +119,23 @@ body, html {
   padding-left: 1%;
 }
 
+#settings-container .rotate {
+  cursor: pointer;
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+#settings-container .rotate.down {
+  -ms-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+
 #settings-container #settings-window {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 30px;
   width: 200px;
   height: 200px;
 }
@@ -139,7 +154,7 @@ body, html {
 }
 
 #settings-container #settings-window table td {
-  padding: 3px 15px;
+  padding: 4px 20px;
 }
 
 #settings-container #settings-window .onoffswitch {
@@ -369,10 +384,6 @@ body, html {
 #close-button:hover {
   color: rgba(255, 255, 255, 0.8);
   border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-#settings-cog {
-  cursor: pointer;
 }
 
 #quote {
