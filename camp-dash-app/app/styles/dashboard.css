@@ -66,12 +66,13 @@ body, html {
   top: 0;
   left: 0;
   padding-top: 1%;
-  padding-left: 1%;
+  padding-left: 0;
 }
 
 #search-container input {
   border: solid 1px #ccc;
   padding: 9px 7px;
+  height: 35px;
   width: 35px;
   color: transparent;
   cursor: pointer;
@@ -79,7 +80,7 @@ body, html {
   outline: none;
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
-  border-radius: 10em;
+  border-radius: 11em;
   -webkit-transition: all .7s;
   -moz-transition: all .7s;
   transition: all .7s;
@@ -287,7 +288,7 @@ body, html {
 
 #quote-container {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -299,7 +300,7 @@ body, html {
 .fa-search {
   pointer-events: none;
   position: relative;
-  left: 23px;
+  left: 25px;
 }
 
 #weather-value {
@@ -441,4 +442,49 @@ body, html {
 .close-t-button:after {
   content: '\f014';
   font-family: 'FontAwesome';
+}
+
+#newsfeed-container {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.article-card {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  text-align: left;
+  height: 120px;
+  width: 40%;
+  padding: 18px;
+  text-shadow: none;
+  text-decoration: none;
+  background-color: rgba(20, 20, 20, 0.8);
+  color: #ddd;
+}
+
+.article-card:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #eee;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.article-title {
+  font-size: 1.2em;
+  position: relative;
+  bottom: 0;
+}
+
+.article-content {
+  display: inline;
+  padding-left: 10px;
+}
+
+.article-img {
+  display: inline;
+  margin: 0;
+  width: 200px;
+  height: 120px;
 }
