@@ -203,7 +203,38 @@ body, html {
 	background-color: rgba(0, 0, 0, 0.3);
 	width: 300px;
 	height: auto;
-  }
+	}
+	.done {
+		color: gray;
+		text-decoration: line-through;
+	}
+	#todo-button {
+		float: right;
+		cursor: pointer;
+	}
+	.close-t-button {
+		float: right;
+		cursor: pointer;
+		font-size: 16px;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		border: none;
+		overflow: hidden;
+		outline: none;
+		color: white;
+		display: none;
+		transition: 0.4s linear;
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	.todo-list-item:hover .close-t-button {
+		display: inline-block;
+		opacity: 1.0;
+	}
+	.close-t-button:after {
+		content: '\f014';
+		font-family: 'FontAwesome';
+	}
   .text-input {
 	font-size: 12px;
 	width: 100%;
@@ -389,45 +420,6 @@ body, html {
   transition: 0.2s;
 }
 
-//todo
-.templates {
-  display: none;
-}
-
-.done {
-  color: gray;
-  text-decoration: line-through;
-}
-
-#todo-button {
-  float: right;
-}
-
-.close-t-button {
-  float: right;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  outline: none;
-  color: white;
-  display: none;
-  transition: 0.4s linear;
-  opacity: 0;
-}
-
-.todo-list-item:hover .close-t-button {
-  display: inline-block;
-  opacity: 1.0;
-}
-
-.close-t-button:after {
-  content: '\f014';
-  font-family: 'FontAwesome';
-}
-
 // newsfeed
 #newsfeed-container {
   position: absolute;
@@ -471,4 +463,9 @@ $cardHeight: 120px;
   margin: 0;
   width: 200px;
   height: $cardHeight;
+}
+
+//todo template
+.templates {
+	display: none;
 }
