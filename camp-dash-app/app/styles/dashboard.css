@@ -51,6 +51,8 @@ body, html {
   position: relative;
   top: 14px;
   padding-left: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 
 #weather-container svg, #weather-container img {
@@ -59,6 +61,7 @@ body, html {
   display: inline-block;
   width: 55%;
   height: auto;
+  transform: translateY(8%);
 }
 
 #search-container {
@@ -301,14 +304,6 @@ body, html {
   pointer-events: none;
   position: relative;
   left: 25px;
-}
-
-#weather-value {
-  font-size: 30px;
-}
-
-#dispCity {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 #greeting-container {
