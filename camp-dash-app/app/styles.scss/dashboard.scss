@@ -45,6 +45,8 @@ body, html {
 	position: relative;
 	top: 14px;
 	padding-left: 10px;
+	color: rgba(255, 255, 255, 0.5);
+	text-align: center;	
   }
   svg, img {
 	filter: invert(100%);
@@ -52,6 +54,7 @@ body, html {
 	display: inline-block;
 	width: 55%;
 	height: auto;
+	transform: translateY(8%);	
   }
 
 }
@@ -311,15 +314,6 @@ body, html {
   pointer-events: none;
   position: relative;
   left: 25px;
-}
-
-// Weather Styles
-#weather-value {
-  font-size: 30px;
-}
-
-#dispCity {
-  color: rgba(255, 255, 255, 0.5);
 }
 
 // Center Time, Greeting, and Focus Styles
