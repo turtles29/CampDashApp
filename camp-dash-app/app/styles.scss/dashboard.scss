@@ -415,14 +415,15 @@ body, html {
 }
 
 // newsfeed
-#newsfeed-container {
-  position: absolute;
-  top: 50%;
-  transform: translate(0%, -50%);
+#newsfeed-container{
+	width: 40em;
+	a {
+		margin-bottom: .5em;
+	}
 }
 
-$cardWidth: 40%;
-$cardHeight: 120px;
+$cardWidth: 100%;
+$cardHeight: 90px;
 
 .article-card {
   display: flex;
@@ -430,7 +431,7 @@ $cardHeight: 120px;
   flex-direction: row;
   text-align: left;
   height: $cardHeight;
-  width: $cardWidth;
+  width: 600px;
   padding: 18px;
   text-shadow: none;
   text-decoration: none;
@@ -455,7 +456,7 @@ $cardHeight: 120px;
 .article-img {
   display: inline;
   margin: 0;
-  width: 200px;
+  width: 150px;
   height: $cardHeight;
 }
 

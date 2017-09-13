@@ -438,9 +438,11 @@ body, html {
 }
 
 #newsfeed-container {
-  position: absolute;
-  top: 50%;
-  transform: translate(0%, -50%);
+  width: 40em;
+}
+
+#newsfeed-container a {
+  margin-bottom: .5em;
 }
 
 .article-card {
@@ -448,8 +450,8 @@ body, html {
   flex: 1;
   flex-direction: row;
   text-align: left;
-  height: 120px;
-  width: 40%;
+  height: 90px;
+  width: 600px;
   padding: 18px;
   text-shadow: none;
   text-decoration: none;
@@ -478,8 +480,8 @@ body, html {
 .article-img {
   display: inline;
   margin: 0;
-  width: 200px;
-  height: 120px;
+  width: 150px;
+  height: 90px;
 }
 
 .templates {
