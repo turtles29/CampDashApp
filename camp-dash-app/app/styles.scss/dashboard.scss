@@ -107,7 +107,28 @@ body, html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	.newsfeed-buttons{
+		width: 50%;
+		color: white;
+		letter-spacing: 1px;
+		cursor: pointer;
+		display: block;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		outline: none;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 30px;
+		margin: 10px auto;
+		position: relative;
+		border: 1px solid rgba(255, 255, 255, .5);
+	}
+	.newsfeed-buttons:hover, .newsfeed-buttons:active {
+		letter-spacing: 4px;
+		border: 1.5px solid rgba(255, 255, 255, 1);
+		}
 }
 
 #settings-container {
@@ -415,11 +436,29 @@ body, html {
 }
 
 // newsfeed
-#newsfeed-container{
+#newsfeed-cards{
 	width: 40em;
+	height: 550px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 	a {
 		margin-bottom: .5em;
 	}
+}
+
+#newsfeed-cards::-webkit-scrollbar{
+	width: 1em;
+}
+
+#newsfeed-cards::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	
+}
+
+#newsfeed-cards::-webkit-scrollbar-thumb{
+	background-color: rgba(255, 255, 255, .2);
+  outline: 1px solid srgba(255, 255, 255, .2);
+	
 }
 
 $cardWidth: 100%;
@@ -445,19 +484,19 @@ $cardHeight: 90px;
   }
 }
 .article-title {
-  font-size: 1.2em;
-  position: relative;
-  bottom: 0;
+	font-size: 1.2em;
 }
 .article-content {
   display: inline;
-  padding-left: 10px;
+	padding-left: 10px;
+	padding-top: 15px;
 }
 .article-img {
   display: inline;
   margin: 0;
   width: 150px;
-  height: $cardHeight;
+	height: $cardHeight;
+	object-fit: cover;
 }
 
 //todo template
