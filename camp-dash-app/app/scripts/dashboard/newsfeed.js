@@ -11,10 +11,10 @@ let settings = {
 	}
 };
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-	let newsContent = response.articles.map(function(article) {
-		return `
+$.ajax(settings).done(function(response) {
+    console.log(response);
+    let newsContent = response.articles.map(function(article) {
+        return `
 			<a class="article-card" href="${article.url}" target="_blank">
 				<img class="article-img" src="${article.urlToImage}" alt="newsfeed-img" />
 				<div class="article-content">
@@ -23,16 +23,17 @@ $.ajax(settings).done(function (response) {
 				</a>
 			</a>
 		`;
-	});
+    });
 
-	const newsTar = document.querySelector('#newsfeed-cards');
-	var fullList = '';
-		for(i = 0; i < newsContent.length - 6; i++){
-			fullList += newsContent[i];
-		}
-	newsTar.innerHTML = fullList;
+    const newsTar = document.querySelector('#newsfeed-cards');
+    var fullList = '';
+    for (i = 0; i < newsContent.length; i++) {
+        fullList += newsContent[i];
+    }
+    newsTar.innerHTML = fullList;
 });
 
+//news feed button toggles div
 
 $('#newsfeed-container').hide();
 
@@ -40,10 +41,9 @@ toggleNewsDiv();
 
 function toggleNewsDiv() {
     $('.newsfeed-buttons').click(function() {
-		$('#newsfeed-container').toggle('fast');
+        $('#newsfeed-container').toggle('fast');
         $('#time').toggle('fast');
         $('#greeting-wrap').toggle('fast');
         $('#newsfeed-button').toggle('fast');
-		
     });
 }

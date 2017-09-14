@@ -115,6 +115,29 @@ body, html {
   transform: translate(-50%, -50%);
 }
 
+#greeting-container .newsfeed-buttons {
+  width: 50%;
+  color: white;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: block;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  margin: 10px auto;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#greeting-container .newsfeed-buttons:hover, #greeting-container .newsfeed-buttons:active {
+  letter-spacing: 4px;
+  border: 1.5px solid white;
+}
+
 #settings-container {
   position: absolute;
   bottom: 0;
@@ -437,12 +460,28 @@ body, html {
   transition: 0.2s;
 }
 
-#newsfeed-container {
+#newsfeed-cards {
   width: 40em;
+  height: 550px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-#newsfeed-container a {
+#newsfeed-cards a {
   margin-bottom: .5em;
+}
+
+#newsfeed-cards::-webkit-scrollbar {
+  width: 1em;
+}
+
+#newsfeed-cards::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#newsfeed-cards::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: 1px solid srgba(255, 255, 255, 0.2);
 }
 
 .article-card {
@@ -468,13 +507,12 @@ body, html {
 
 .article-title {
   font-size: 1.2em;
-  position: relative;
-  bottom: 0;
 }
 
 .article-content {
   display: inline;
   padding-left: 10px;
+  padding-top: 15px;
 }
 
 .article-img {
@@ -482,6 +520,7 @@ body, html {
   margin: 0;
   width: 150px;
   height: 90px;
+  object-fit: cover;
 }
 
 .templates {
