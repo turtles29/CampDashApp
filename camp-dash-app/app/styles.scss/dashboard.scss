@@ -129,6 +129,13 @@ body, html {
 		letter-spacing: 4px;
 		border: 1.5px solid rgba(255, 255, 255, 1);
 		}
+	#source-link{
+		color: white;
+		font-size: .5em;
+		a{
+			color: white;
+		}
+	}
 }
 
 #settings-container {

@@ -138,6 +138,15 @@ body, html {
   border: 1.5px solid white;
 }
 
+#greeting-container #source-link {
+  color: white;
+  font-size: .5em;
+}
+
+#greeting-container #source-link a {
+  color: white;
+}
+
 #settings-container {
   position: absolute;
   bottom: 0;
