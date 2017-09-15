@@ -85,29 +85,31 @@ function init() {
 }
 
 function getIcon(weatherId) {
+	const icon_path = 'assets/images/weather/';
+
     if (weatherId > 199 && weatherId < 233) {
         $('#icon-temp').prepend(
-            '<img id="weather-icon" src="images/icons/thunderstorm.svg"/>'
+            '<img id="weather-icon" src="' + icon_path + 'thunderstorm.svg"/>'
         );
     } else if (weatherId > 299 && weatherId < 322) {
         $('#icon-temp').prepend(
-            '<img id="weather-icon" src="images/icons/drizzle.svg"/>'
+            '<img id="weather-icon" src="' + icon_path + 'drizzle.svg"/>'
         );
     } else if (weatherId > 499 && weatherId < 532) {
         $('#icon-temp').prepend(
-            '<img id="weather-icon" src="images/icons/rain.svg"/>'
+            '<img id="weather-icon" src="' + icon_path + 'rain.svg"/>'
         );
     } else if (weatherId > 599 && weatherId < 623) {
         $('#icon-temp').prepend(
-            '<img id="weather-icon" src="images/icons/snow.svg"/>'
+            '<img id="weather-icon" src="' + icon_path + 'snow.svg"/>'
         );
     } else if (weatherId === 800) {
         $('#icon-temp').prepend(
-            '<img id="weather-icon" src="images/icons/clear.svg"/>'
+            '<img id="weather-icon" src="' + icon_path + 'clear.svg"/>'
         );
     } else if (weatherId > 800 && weatherId < 805) {
         $('#icon-temp').prepend(
-            '<img id="weather-icon" src="images/icons/Cloud.svg"/>'
+            '<img id="weather-icon" src="' + icon_path + 'Cloud.svg"/>'
         );
     }
 }

@@ -18,8 +18,8 @@ function updateClock() {
   clockLocation.innerText = time.join(':');
   setTimeout(updateClock, 1000);
 
-  let timeOfDay = 'deep';
-  if (hr <= 4 || hr >= 22) timeOfDay = 'midnight';
+  let timeOfDay = 'galaxy';
+  if (hr <= 4 || hr >= 22) timeOfDay = 'night';
   else if (hr > 4 && hr < 8) timeOfDay = 'sunrise';
   else if (hr >= 8 && hr < 12) timeOfDay = 'morning';
   else if (hr >= 12 && hr < 16) timeOfDay = 'ocean';
