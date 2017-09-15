@@ -121,7 +121,7 @@ body, html {
   letter-spacing: 1px;
   cursor: pointer;
   display: block;
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: rgba(30, 30, 30, 0.7);
   background-repeat: no-repeat;
   overflow: hidden;
   outline: none;
@@ -133,7 +133,7 @@ body, html {
 }
 
 #greeting-container .newsfeed-buttons:hover, #greeting-container .newsfeed-buttons:active {
-  background-color: rgba(30, 30, 30, 0.5);
+  background-color: #1e1e1e;
   color: white;
   transition: 0.3s;
 }
