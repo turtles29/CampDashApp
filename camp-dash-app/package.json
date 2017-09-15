@@ -11,9 +11,9 @@
     "url": ""
   },
   "scripts": {
-    "test": "xo",
+    "compile": "",
     "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "electron-packager . --out=dist --asar --overwrite --all --icons='camp-dash-app/app/images/camp-dash-logo.png'"
   },
   "dependencies": {
     "babel": "^6.23.0",
