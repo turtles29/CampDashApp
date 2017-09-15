@@ -45,5 +45,6 @@ function toggleNewsDiv() {
         $('#time').toggle('fast');
         $('#greeting-wrap').toggle('fast');
         $('#newsfeed-button').toggle('fast');
+        $('#quote-container').toggle('fast');
     });
 }
