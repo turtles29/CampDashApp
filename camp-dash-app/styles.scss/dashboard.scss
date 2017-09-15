@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
 * {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body, html {
@@ -280,7 +280,6 @@ body, html {
 	  width: 100px;
 	  display: block;
 	  padding: 0;
-	  width: 100%;
 	  span {
 		margin-right: 0;
 		padding-right: 0;
@@ -456,7 +455,7 @@ body, html {
 }
 
 #newsfeed-cards::-webkit-scrollbar-thumb{
-	background-color: rgba(255, 255, 255, .2);
+	background-color: rgba(255, 255, 255, .5);
   outline: 1px solid srgba(255, 255, 255, .2);
 
 }

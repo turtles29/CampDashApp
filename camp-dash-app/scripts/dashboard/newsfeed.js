@@ -12,7 +12,6 @@ let settings = {
 };
 
 $.ajax(settings).done(function(response) {
-    console.log(response);
     let newsContent = response.articles.map(function(article) {
         return `
 			<a class="article-card" href="${article.url}" target="_blank">
