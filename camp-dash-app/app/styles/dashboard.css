@@ -116,12 +116,12 @@ body, html {
 }
 
 #greeting-container .newsfeed-buttons {
-  width: 50%;
-  color: white;
+  width: 140px;
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 1px;
   cursor: pointer;
   display: block;
-  background-color: Transparent;
+  background-color: rgba(30, 30, 30, 0.9);
   background-repeat: no-repeat;
   overflow: hidden;
   outline: none;
@@ -129,13 +129,13 @@ body, html {
   font-weight: 500;
   line-height: 30px;
   margin: 10px auto;
-  position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #c8c8c8;
 }
 
 #greeting-container .newsfeed-buttons:hover, #greeting-container .newsfeed-buttons:active {
-  letter-spacing: 4px;
-  border: 1.5px solid white;
+  background-color: rgba(30, 30, 30, 0.5);
+  color: white;
+  transition: 0.3s;
 }
 
 #settings-container {
