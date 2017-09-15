@@ -17,12 +17,12 @@ function loadQuote() {
       update(this.response);
     }
   };
-  xhttp.open("GET", "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json&json=", true);
+  xhttp.open('GET', 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json&json=', true);
   xhttp.send();
 }
 
 try { loadQuote() } catch(err) {
-  console.log("first quote did not load, trying again.");
+  console.log('first quote did not load, trying again.');
   loadQuote();
 };
 
