@@ -43,6 +43,7 @@ function toggleNewsDiv() {
         $('#newsfeed-container').toggle('fast');
         $('#time').toggle('fast');
         $('#greeting-wrap').toggle('fast');
-        $('#newsfeed-button').toggle('fast');
+		$('#newsfeed-button').toggle('fast');
+		$('#quote-container').toggle('fast');		
     });
 }

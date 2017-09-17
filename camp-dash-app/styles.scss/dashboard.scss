@@ -129,6 +129,13 @@ body, html {
       color: rgba(255, 255, 255, 1);
       transition: 0.3s;
 		}
+		#source-link{
+			color: white;
+			font-size: .5em;
+				a{
+					color: white;
+				}
+			}
 }
 
 #settings-container {

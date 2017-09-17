@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 * {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 body, html {
   height: 100%;
@@ -111,6 +111,11 @@ body, html {
     background-color: #1e1e1e;
     color: white;
     transition: 0.3s; }
+  #greeting-container #source-link {
+    color: white;
+    font-size: .5em; }
+    #greeting-container #source-link a {
+      color: white; }
 
 #settings-container {
   position: absolute;
@@ -224,7 +229,7 @@ body, html {
     position: relative;
     bottom: 0;
     box-sizing: border-box;
-    border: 1px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0);
     margin-bottom: 5px; }
   #todo-container ul {
     list-style: none;
