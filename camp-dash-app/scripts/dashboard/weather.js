@@ -85,9 +85,9 @@ function init() {
 }
 
 function getIcon(weatherId) {
-	const icon_path = 'assets/images/weather/';
+    const icon_path = 'assets/images/weather/';
 
-    if (weatherId > 199 && weatherId < 233) {
+    if (weatherId > 0 && weatherId < 233) {
         $('#icon-temp').prepend(
             '<img id="weather-icon" src="' + icon_path + 'thunderstorm.svg"/>'
         );
@@ -107,7 +107,10 @@ function getIcon(weatherId) {
         $('#icon-temp').prepend(
             '<img id="weather-icon" src="' + icon_path + 'clear.svg"/>'
         );
-    } else if (weatherId > 800 && weatherId < 805) {
+    } else if (
+        (weatherId > 800 && weatherId < 1000) ||
+        (weatherId > 700 && weatherId < 800)
+    ) {
         $('#icon-temp').prepend(
             '<img id="weather-icon" src="' + icon_path + 'Cloud.svg"/>'
         );
