@@ -7,7 +7,7 @@
 
 Prior to installing you should have [node](https://nodejs.org/en/) installed.
 
-To intsall the project, [clone](https://help.github.com/articles/cloning-a-repository/) the entire repository to local project directory. After cloning app, open a Terminal window at local project directory, switch to camp-dash-app directory inside parent directory `cd /camp-dash-app` . Now run the following inside /camp-dash-app on the terminal to start the Electron app:
+To intsall the project, [clone](https://help.github.com/articles/cloning-a-repository/) the entire repository to local project directory. After cloning app, open a Terminal window at local project directory, switch to camp-dash-app directory inside the parent directory `cd /camp-dash-app` . Now run the following inside /camp-dash-app on the terminal to start the Electron app:
 ```
 npm start
 ```
