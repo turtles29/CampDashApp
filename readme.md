@@ -14,13 +14,13 @@ npm start
 
 ## Application Features
 
-..* News Feed
-..* Inspirational Quotes
-..* Todo List
-..* Search
-..* Local Weather
-..* Clock
-..* Settings Customization
+..*News Feed
+..*Inspirational Quotes
+..*Todo List
+..*Search
+..*Local Weather
+..*Clock
+..*Settings Customization
 
 ## Snapshots
 
